@@ -25,16 +25,16 @@ export default async function TopNav ()  {
             <GiMatchTip size={40} className='text-black' />
 
             <div className='font-bold text-3xl flex '>
-                <span className='text-white '>Next</span>
-                <span className='text-white'>Match</span>
+                <span className='text-white '>Jobs</span>
+                <span className='text-white'>Firma</span>
             </div>
 
         </NavbarBrand>
 
         <NavbarContent justify='center'>
 
-           <NavLink href='/Members' label='matchs' />
-           <NavLink href='/Lists' label='Lists' />
+           <NavLink href='/Members' label='job' />
+           <NavLink href='/Lists' label='firmaList' />
            <NavLink href='/Messages' label='messages' />
            
         </NavbarContent>
