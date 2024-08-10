@@ -22,7 +22,7 @@ export default function LoginForm ()  {
   });
   
   const  onsubmit =async (data: loginschem ) => {
-    const result = await signInUser(data);
+    const result = await signInUser({ data });
 
     if(result.status === 'success'){
     router.push('/Members');

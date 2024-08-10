@@ -5,12 +5,12 @@ import { registerschema } from "../lib/schemas/registerschema";
 import bcrypt from "bcryptjs";
 import { prisma } from "../lib/prisma";
 import { Action } from "@prisma/client/runtime/library";
-import { ActionResult } from "next/dist/server/app-render/types";
+
 import { loginschem } from "../lib/loginschema";
 import { signIn, signOut } from "../auth";
-import { AuthError } from "next-auth";
-
-export async function signInUser(data:loginschem): Promise<ActionResult<string>> {
+import { AuthError, User } from "next-auth";
+import { ActionResult } from "next/dist/server/app-render/types";
+export async function signInUser({ data }: { data: loginschem; }): Promise<ActionResult <string> > {
   try {
     const result = await signIn('credentials',{
         email: data.email,
