@@ -24,7 +24,6 @@ async function seedMembers() {
             description: member.description,
             city: member.city,
             country: member.country,
-            image: member.image,
             photos: {
               create: {
                 url: member.image,
